@@ -1,3 +1,4 @@
+import 'package:flui/flui.dart';
 import 'package:flutter/material.dart';
 
 class ShareLocation extends StatefulWidget {
@@ -58,13 +59,27 @@ class _ShareLocationState extends State<ShareLocation> {
                 ),
               ],
             ),
-            FlatButton(
-              color: Colors.blue,
-              child: Text('分享'),
-              onPressed: () {
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              alignment: Alignment.center,
+              child: FLLoadingButton(
+                child: Text('登陆'),
+                minWidth: 250,
+                color: Colors.blueAccent,
+                loading: false,
+                onPressed: () {
 
-              },
+                },
+              ),
             ),
+            // FlatButton(
+            //   color: Colors.blue,
+              
+            //   child: Text('分享'),
+            //   onPressed: () {
+
+            //   },
+            // ),
           ],
         ),
       ),
